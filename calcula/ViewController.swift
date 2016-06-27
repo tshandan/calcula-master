@@ -48,14 +48,58 @@ class ViewController: UIViewController {
     }
     @IBAction func num0(sender: AnyObject) {
         edite.text!=edite.text!+"\(0)"
+       
     }
+    
     @IBAction func dian(sender: AnyObject) {
         edite.text!=edite.text!+"."
+        if(edite.text!=="."){
+            edite.text!=edite.text!+"error"
+            edite.text!=""
+        }
     }
     @IBAction func clear(sender: AnyObject) {
         edite.text!=""
     }
-   
+    
+    @IBAction func zhengfu(sender: AnyObject) {
+        if(edite.text!==""){
+          edite.text!=edite.text!+"-"
+        }
+        else{
+            temp = -temp
+            edite.text!="-"+edite.text!
+        }
+    }
+    
+    @IBAction func daoshu(sender: AnyObject) {
+        flag=5
+        if((Double)(edite.text!)!==0){
+            edite.text!=edite.text!+"Error"
+        }
+        else{
+            temp1=1/(Double)(edite.text!)!
+            edite.text="\(temp1)"
+        }
+        if(flag==5){
+            temp1=1/temp1
+        }
+    }
+    
+    @IBAction func genhao(sender: AnyObject) {
+        flag=6
+        if(edite.text!==""){
+            edite.text!=edite.text!+"请先添加一个数字"
+        }
+        else{
+        temp1=sqrt((Double)(edite.text!)!)
+        edite.text="\(temp1)"
+        }
+        if flag==6{
+        temp1=sqrt(temp1)
+        }
+    }
+    
     @IBAction func add(sender: AnyObject) {
         flag=1
         temp=(Double)(edite.text!)!
@@ -77,6 +121,9 @@ class ViewController: UIViewController {
         temp=(Double)(edite.text!)!
         edite.text!=""
     }
+    
+    
+    
     @IBAction func result(sender: AnyObject) {
         if(flag==1){
             temp1=(Double)(edite.text!)!+temp
@@ -101,7 +148,9 @@ class ViewController: UIViewController {
                 edite.text="\(temp1)"
             }
         }
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
