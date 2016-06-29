@@ -20,46 +20,121 @@ class ViewController: UIViewController {
     @IBOutlet weak var edite: UITextField!
 
     @IBAction func num1(sender: AnyObject) {
-        edite.text!=edite.text!+"\(1)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="1"
+        }
+        else{
+            edite.text!=edite.text!+"\(1)"
+        }
     }
     @IBAction func num2(sender: AnyObject) {
-        edite.text!=edite.text!+"\(2)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="2"
+        }
+        else{
+            edite.text!=edite.text!+"\(2)"
+        }
     }
     @IBAction func num3(sender: AnyObject) {
-        edite.text!=edite.text!+"\(3)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="3"
+        }
+        else{
+            edite.text!=edite.text!+"\(3)"
+        }
     }
     @IBAction func num4(sender: AnyObject) {
-        edite.text!=edite.text!+"\(4)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="4"
+        }
+        else{
+            edite.text!=edite.text!+"\(4)"
+        }
     }
     @IBAction func num5(sender: AnyObject) {
-        edite.text!=edite.text!+"\(5)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="5"
+        }
+        else{
+            edite.text!=edite.text!+"\(5)"
+        }
     }
     @IBAction func num6(sender: AnyObject) {
-        edite.text!=edite.text!+"\(6)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="6"
+        }
+        else{
+            edite.text!=edite.text!+"\(6)"
+        }
     }
     @IBAction func num7(sender: AnyObject) {
-        edite.text!=edite.text!+"\(7)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="7"
+        }
+        else{
+            edite.text!=edite.text!+"\(7)"
+        }
     }
     @IBAction func num8(sender: AnyObject) {
-        edite.text!=edite.text!+"\(8)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="8"
+        }
+        else{
+            edite.text!=edite.text!+"\(8)"
+        }
     }
     @IBAction func num9(sender: AnyObject) {
-        edite.text!=edite.text!+"\(9)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="9"
+        }
+        else{
+            edite.text!=edite.text!+"\(9)"
+        }
     }
     @IBAction func num0(sender: AnyObject) {
-        edite.text!=edite.text!+"\(0)"
+        if (edite.text!=="0")
+        {
+            edite.text=""
+            edite.text="0"
+        }
+        else{
+            edite.text!=edite.text!+"\(0)"
+        }
        
     }
     
     @IBAction func dian(sender: AnyObject) {
-        edite.text!=edite.text!+"."
+        
         if(edite.text!=="."){
-            edite.text!=edite.text!+"error"
-            edite.text!=""
+            edite.text="."
+        }
+        else
+        {
+            edite.text=edite.text!+"."
         }
     }
     @IBAction func clear(sender: AnyObject) {
-        edite.text!=""
+
+        edite.text!="0"
+       
     }
     
     @IBAction func zhengfu(sender: AnyObject) {
