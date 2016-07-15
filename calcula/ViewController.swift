@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var flag=0
     var temp:Double=0
     var temp1:Double=0
+    var pointval:Bool=false
     @IBOutlet weak var edite: UITextField!
 
     @IBAction func num1(sender: AnyObject) {
@@ -123,12 +124,15 @@ class ViewController: UIViewController {
     
     @IBAction func dian(sender: AnyObject) {
         
-        if(edite.text!=="."){
+        if(pointval==false){
             edite.text="."
+            pointval=true
         }
+    
         else
         {
-            edite.text=edite.text!+"."
+            edite.text=edite.text!+""
+            
         }
     }
     @IBAction func clear(sender: AnyObject) {
@@ -165,36 +169,53 @@ class ViewController: UIViewController {
         flag=6
         if(edite.text!==""){
             edite.text!=edite.text!+"请先添加一个数字"
+
         }
         else{
+        edite.text!=edite.text!+""
         temp1=sqrt((Double)(edite.text!)!)
         edite.text="\(temp1)"
         }
         if flag==6{
         temp1=sqrt(temp1)
+       
         }
     }
     
     @IBAction func add(sender: AnyObject) {
+        if flag==0{
+            temp=(Double)(edite.text!)!
+            edite.text=""
+            pointval=false
+        }
         flag=1
-        temp=(Double)(edite.text!)!
-        edite.text=""
+        
     }
     @IBAction func jian(sender: AnyObject) {
+        if flag==0{
+            temp=(Double)(edite.text!)!
+            edite.text!=""
+            pointval=false
+        }
         flag=2
-        temp=(Double)(edite.text!)!
-        edite.text!=""
+        
     }
     @IBAction func cheng(sender: AnyObject) {
-        flag=3
+        if flag==0{
         temp=(Double)(edite.text!)!
         edite.text!=""
+        pointval=false
+        }
+        flag=3
     }
     
     @IBAction func chu(sender: AnyObject) {
+        if flag==0{
+            temp=(Double)(edite.text!)!
+            edite.text!=""
+            pointval=false
+        }
         flag=4
-        temp=(Double)(edite.text!)!
-        edite.text!=""
     }
     
     
